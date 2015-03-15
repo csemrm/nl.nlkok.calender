@@ -1,0 +1,13 @@
+{
+	"id": "nl.nlkok.calender",
+	"name": "Calender widget",
+	"description" : "Titanium Alloy calender widget",
+	"author": "Niels Kok",
+	"version": "1.0",
+	"copyright":"Copyright (c) 2015",
+	"license":"Apache 2.0",
+	"min-alloy-version": "1.5",
+	"min-titanium-version":"3.4",
+	"tags":"titanium, alloy, widget, calender, momentjs",
+	"platforms":"android,ios"
+}

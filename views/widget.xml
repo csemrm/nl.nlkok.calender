@@ -1,0 +1,74 @@
+<Alloy>
+    <View id="calenderContainer">
+        <View id="navigation">
+            <Label id="navLeftBtn" text="<" onSingletap="prev" />
+            <Label id="navTitle" text="Calender" />
+            <Label id="navRightBtn" text=">" onSingletap="next" />
+        </View>
+        <View id="labelWrapper">
+            <Label text="M" class="dayLabel" />
+            <Label text="D" class="dayLabel" />
+            <Label text="W" class="dayLabel" />
+            <Label text="D" class="dayLabel" />
+            <Label text="V" class="dayLabel" />
+            <Label text="Z" class="dayLabel" />
+            <Label text="Z" class="dayLabel" />
+        </View>
+        <View id="weekWrapper">
+            <View id="week1" class="week">
+                <Button id="day1" class="day" />
+                <Button id="day2" class="day" />
+                <Button id="day3" class="day" />
+                <Button id="day4" class="day" />
+                <Button id="day5" class="day" />
+                <Button id="day6" class="day" />
+                <Button id="day7" class="day" />
+            </View>
+            <View id="week2" class="week">
+                <Button id="day8" class="day" />
+                <Button id="day9" class="day" />
+                <Button id="day10" class="day" />
+                <Button id="day11" class="day" />
+                <Button id="day12" class="day" />
+                <Button id="day13" class="day" />
+                <Button id="day14" class="day" />
+            </View>
+            <View id="week3" class="week">
+                <Button id="day15" class="day" />
+                <Button id="day16" class="day" />
+                <Button id="day17" class="day" />
+                <Button id="day18" class="day" />
+                <Button id="day19" class="day" />
+                <Button id="day20" class="day" />
+                <Button id="day21" class="day" />
+            </View>
+            <View id="week4" class="week">
+                <Button id="day22" class="day" />
+                <Button id="day23" class="day" />
+                <Button id="day24" class="day" />
+                <Button id="day25" class="day" />
+                <Button id="day26" class="day" />
+                <Button id="day27" class="day" />
+                <Button id="day28" class="day" />
+            </View>
+            <View id="week5" class="week">
+                <Button id="day29" class="day" />
+                <Button id="day30" class="day" />
+                <Button id="day31" class="day" />
+                <Button id="day32" class="day" />
+                <Button id="day33" class="day" />
+                <Button id="day34" class="day" />
+                <Button id="day35" class="day" />
+            </View>
+            <View id="week6" class="week">
+                <Button id="day36" class="day" />
+                <Button id="day37" class="day" />
+                <Button id="day38" class="day" />
+                <Button id="day39" class="day" />
+                <Button id="day40" class="day" />
+                <Button id="day41" class="day" />
+                <Button id="day42" class="day" />
+            </View>
+        </View>
+    </View>
+</Alloy>

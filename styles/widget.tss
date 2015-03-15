@@ -1,0 +1,50 @@
+/* CALENDER WIDGET STYLING */
+"#calenderContainer" : {
+	borderWidth: 1,
+	borderColor: 'black',
+	layout: 'vertical',
+	height: 300, width: Ti.UI.FILL
+}
+
+/* NAVIGATION STYLING */
+"#navigation" : {
+	height: 40, width: Ti.UI.FILL
+}
+"#navLeftBtn" : {
+	left: 15
+}
+"#navRightBtn" : {
+	right: 15
+}
+
+/* DAY LABEL STYLING */
+"#labelWrapper" : {
+	backgroundColor: 'pink',
+	layout: 'horizontal',
+	height: 15, width: Ti.UI.FILL
+}
+".dayLabel" : {
+	color: 'black',
+	font: {
+		fontSize: 12
+	},
+	textAlign: 'center',
+	height: Ti.UI.FILL, width: '14.2%'
+}
+
+/* WEEK AND DAY STYLING */
+"#weekWrapper" : {
+	layout: 'vertical',
+	height: Ti.UI.FILL, width: Ti.UI.FILL
+}
+
+".week" : {
+	borderWidth: 1,
+	layout: 'horizontal',
+	height: '19.9%', width: Ti.UI.FILL
+}
+
+".day" : {
+	backgroundColor: '#eeeeee',
+	height: Ti.UI.FILL, width: '14.2%'
+}
