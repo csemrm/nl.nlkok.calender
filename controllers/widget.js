@@ -1,6 +1,6 @@
 // LOAD HELPER FILE
-var helper = require('helper');
-var moment = require('moment.min');
+var helper = require(WPATH('helper'));
+var moment = require(WPATH('moment.min'));
 
 var monthCorrection = 0;
 var iDayBlockCounter = 1;
