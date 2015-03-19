@@ -1,18 +1,18 @@
 <Alloy>
     <View id="calenderContainer">
         <View id="navigation">
-            <Label id="navLeftBtn" text="<" onSingletap="prev" />
+            <Button id="navLeftBtn" class="navBtn" onSingletap="prev" />
             <Label id="navTitle" text="Calender" />
-            <Label id="navRightBtn" text=">" onSingletap="next" />
+            <Button id="navRightBtn" class="navBtn" onSingletap="next" />
         </View>
         <View id="labelWrapper">
-            <Label text="M" class="dayLabel" />
-            <Label text="D" class="dayLabel" />
-            <Label text="W" class="dayLabel" />
-            <Label text="D" class="dayLabel" />
-            <Label text="V" class="dayLabel" />
-            <Label text="Z" class="dayLabel" />
-            <Label text="Z" class="dayLabel" />
+            <Label text="Ma" class="dayLabel" />
+            <Label text="Di" class="dayLabel" />
+            <Label text="Wo" class="dayLabel" />
+            <Label text="Do" class="dayLabel" />
+            <Label text="Vr" class="dayLabel" />
+            <Label text="Za" class="dayLabel" />
+            <Label text="Zo" class="dayLabel" />
         </View>
         <View id="weekWrapper">
             <View id="week1" class="week">

@@ -1,3 +1,7 @@
+# DO NOT USE THIS WIDGET, STILL WORKING ON IT
+
+-------------
+
 # Titanium Alloy calender widget for Android and iOS
 Titanium Alloy calender widget Android and iOS
 

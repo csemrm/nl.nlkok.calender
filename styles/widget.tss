@@ -3,12 +3,18 @@
 	borderWidth: 1,
 	borderColor: 'black',
 	layout: 'vertical',
-	height: 300, width: Ti.UI.FILL
+	height: Ti.UI.FILL, width: Ti.UI.FILL
 }
 
 /* NAVIGATION STYLING */
 "#navigation" : {
 	height: 40, width: Ti.UI.FILL
+}
+".navBtn" : {
+	font: {
+		fontFamily: 'FontAwesome',
+		fontSize: '20dp'
+	}
 }
 "#navLeftBtn" : {
 	left: 15
@@ -19,14 +25,14 @@
 
 /* DAY LABEL STYLING */
 "#labelWrapper" : {
-	backgroundColor: 'pink',
 	layout: 'horizontal',
 	height: 15, width: Ti.UI.FILL
 }
 ".dayLabel" : {
 	color: 'black',
 	font: {
-		fontSize: 12
+		fontFamily: 'Helvetica Bold',
+		fontSize: '12dp'
 	},
 	textAlign: 'center',
 	height: Ti.UI.FILL, width: '14.2%'
@@ -39,12 +45,18 @@
 }
 
 ".week" : {
-	borderWidth: 1,
 	layout: 'horizontal',
 	height: '19.9%', width: Ti.UI.FILL
 }
 
 ".day" : {
 	backgroundColor: '#eeeeee',
+	borderColor: 'transparent',
+	borderRadius: 15,
+	borderWidth: 3,
+    font: {
+		fontFamily: 'Helvetica Light',
+		fontSize: '14dp'
+    },
 	height: Ti.UI.FILL, width: '14.2%'
 }
