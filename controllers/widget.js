@@ -40,13 +40,22 @@ Ti.API.info((weekWrapperHeight / 6) / 2);
 
 
 function click(e) {
-    Ti.API.info(e.source.blockId + ' | ' + e.source.title + ' | ' + e.source.monthName + " | " + e.source.monthId + " | " + e.source.year);
+    var day       = parseInt(e.source.title),
+        blockId   = (Ti.Platform.osname == "android") ? e.source._properties.blockId : e.source.blockId,
+        monthName = (Ti.Platform.osname == "android") ? e.source._properties.monthName : e.source.monthName,
+        monthId   = (Ti.Platform.osname == "android") ? e.source._properties.monthId : e.source.monthId,
+        year      = (Ti.Platform.osname == "android") ? e.source._properties.year : e.source.year;
+
+	// CONSOLE LOG
+    Ti.API.info(blockId + ' | ' + day + ' | ' + monthName + " | " + monthId + " | " + year + ' ' + aDayBlocks.length);
+
     // RESET DAYBLOCK COUNTER
     iDayBlockCounter = 1;
 	var iFirstDayBlock = helper.getFirstDayId(monthFirsyDayId);
     for (var i = 0; i < aDayBlocks.length; i++) {
         if (i >= iFirstDayBlock && iDayBlockCounter <= monthDays) {
-            if (i + 1 == parseInt(e.source.blockId)) {
+        	Ti.API.info(i + ' en ' + day);
+            if (i + 1 == day) {
                 // CHANGE UI PROPERTIES TO SELECTED
                 aDayBlocks[i].applyProperties({
                     backgroundColor: args.colors.dayBg,
@@ -70,7 +79,6 @@ function click(e) {
                     color: args.colors.dayCurrentLabel
                 });
             }
-
         }
     }
 }
@@ -146,7 +154,7 @@ function drawCalender() {
             // CHANGE UI PROPERTIES
             dayBlock.applyProperties({
                 backgroundColor: bgColor,
-                blockId: i,
+                blockId: i.toString(),
                 color: labelColor,
                 font: {
             		fontFamily: args.fonts.days
