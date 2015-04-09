@@ -52,8 +52,7 @@
 ".day" : {
 	backgroundColor: '#eeeeee',
 	borderColor: 'transparent',
-	borderRadius: 15,
-	borderWidth: 3,
+	borderWidth: 1,
     font: {
 		fontFamily: 'Helvetica Light',
 		fontSize: '14dp'

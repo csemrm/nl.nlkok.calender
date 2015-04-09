@@ -9,6 +9,26 @@ Titanium Alloy calender widget Android and iOS
 1. Download and install the widget
 2. ....
 
+var calender = Alloy.createWidget('nl.nlkok.calender', {
+    locale: 'nl',
+    disableHistory: true,
+    colors: {
+        btn: '#000',
+        dayBg: 'transparent',
+        dayLabel: '#000',
+        dayCurrent: '#a6058a',
+        dayCurrentLabel: '#fff',
+        daySelected: '#a6058a',
+        daySelectedLabel: '#000',
+    },
+    fonts: {
+        navigation: 'Helvetica Bold',
+        days: 'Helvetica Light'
+    }
+});
+
+$.calenderContainer.add(calender.getView());
+
 ## Methods
 ...
 

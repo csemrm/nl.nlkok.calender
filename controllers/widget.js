@@ -31,13 +31,6 @@ $.navRightBtn.setTitle(fa.arrowCircleORight);
 $.navLeftBtn.setColor(args.colors.btn);
 $.navRightBtn.setColor(args.colors.btn);
 
-// SET HEIGHT AND WIDTH
-var weekWrapperHeight = args.height - $.navigation.getHeight() - $.labelWrapper.getHeight();
-
-Ti.API.info(weekWrapperHeight);
-Ti.API.info(weekWrapperHeight / 6);
-Ti.API.info((weekWrapperHeight / 6) / 2);
-
 
 function click(e) {
     var day       = parseInt(e.source.title),
@@ -47,15 +40,15 @@ function click(e) {
         year      = (Ti.Platform.osname == "android") ? e.source._properties.year : e.source.year;
 
 	// CONSOLE LOG
-    Ti.API.info(blockId + ' | ' + day + ' | ' + monthName + " | " + monthId + " | " + year + ' ' + aDayBlocks.length);
+    Ti.API.info(blockId + ' | ' + day + ' | ' + monthName + " | " + monthId + " | " + year);
 
     // RESET DAYBLOCK COUNTER
     iDayBlockCounter = 1;
 	var iFirstDayBlock = helper.getFirstDayId(monthFirsyDayId);
     for (var i = 0; i < aDayBlocks.length; i++) {
         if (i >= iFirstDayBlock && iDayBlockCounter <= monthDays) {
-        	Ti.API.info(i + ' en ' + day);
-            if (i + 1 == day) {
+        	//Ti.API.info(i + ' en ' + day);
+            if (i + 1 == blockId) {
                 // CHANGE UI PROPERTIES TO SELECTED
                 aDayBlocks[i].applyProperties({
                     backgroundColor: args.colors.dayBg,
@@ -159,10 +152,10 @@ function drawCalender() {
                 font: {
             		fontFamily: args.fonts.days
                 },
-                title: iDayBlockCounter,
-                monthName: monthName,
-                monthId: monthId,
-                year: monthYear
+                title: iDayBlockCounter.toString(),
+                monthName: monthName.toString(),
+                monthId: monthId.toString(),
+                year: monthYear.toString()
             });
             // IDAYBLOCKCOUNTER + 1
             iDayBlockCounter++;
@@ -172,6 +165,7 @@ function drawCalender() {
             removeWeek();
         }
         // PUSH TO ADAYBLOCKS ARRAY
+        Ti.API.info("push " + i);
         aDayBlocks.push(dayBlock);
     }
 }
@@ -209,9 +203,6 @@ function addWeek() {
         aWeeks[i].setHeight('16.666%');
     }
 }
-
-
-
 
 update();
 
